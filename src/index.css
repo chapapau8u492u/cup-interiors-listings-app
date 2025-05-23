@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,19 +36,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-emptyCup-lightBg text-emptyCup-text;
+  }
+}
+
+@layer components {
+  .star-filled {
+    @apply text-emptyCup-yellow;
+  }
+  
+  .star-empty {
+    @apply text-gray-300;
+  }
+  
+  .nav-icon {
+    @apply flex flex-col items-center justify-center gap-1 text-xs text-gray-500;
+  }
+  
+  .studio-stat {
+    @apply flex items-center gap-2;
+  }
+  
+  .studio-card {
+    @apply bg-emptyCup-cardBg rounded-lg p-4 mb-3 transition-all duration-200;
+  }
+  
+  .studio-card-shortlisted {
+    @apply border-l-4 border-emptyCup-yellow;
   }
 }
